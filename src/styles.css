@@ -1,0 +1,66 @@
+.lp-terminal {
+  --lp-terminal-accent: #93c5fd;
+  --lp-terminal-background: #0f172a;
+  color: #e2e8f0;
+  background: var(--lp-terminal-background);
+  font:
+    14px/1.6 ui-monospace,
+    monospace;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.lp-terminal-output {
+  list-style: none;
+  padding: 0;
+  max-height: 28rem;
+  overflow: auto;
+}
+.lp-terminal-output li {
+  border-bottom: 1px solid #475569;
+  padding: 0.5rem 0;
+  overflow-wrap: anywhere;
+}
+.lp-terminal pre {
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.lp-terminal-state {
+  font-size: 0.8rem;
+  color: #cbd5e1;
+}
+.lp-terminal [data-status='error'] {
+  border-left: 3px solid #fca5a5;
+  padding-left: 0.5rem;
+}
+.lp-terminal-input {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+.lp-terminal input {
+  flex: 1;
+  min-width: 6rem;
+  padding: 0.5rem;
+  color: inherit;
+  background: #1e293b;
+  border: 1px solid #64748b;
+  font: inherit;
+}
+.lp-terminal button {
+  padding: 0.4rem 0.75rem;
+  background: #1e293b;
+  color: inherit;
+  border: 1px solid #94a3b8;
+  font: inherit;
+  cursor: pointer;
+}
+.lp-terminal button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.lp-terminal :focus-visible {
+  outline: 2px solid var(--lp-terminal-accent);
+  outline-offset: 3px;
+}
